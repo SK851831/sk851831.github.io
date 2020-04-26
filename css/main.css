@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'BlowBrush';
+    src: url('fonts/BlowBrush.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+ @font-face {
+    font-family: 'Alissya';
+    src: url('fonts/Alissya.ttf')  format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin-block-start: 0;
+    margin-block-end: 0; 
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    top: 0;
+    font-size: 100%; 
+}
+
+* {
+    font-family: 'Roboto Slab', serif;
+    color: #333447;
+    line-height: 1.5; 
+}
+    
+.section{
+    background: blue;
+    min-height: 100vh;
+}
+
+#home-section{
+    background: white; 
+}
+
+.masthead{
+    margin: 3vw;
+}
+
+.my-name{
+    font-family: Alissya;
+    font-size: 6vw;
+    font-weight: 100;
+    line-height: 100%;
+    letter-spacing: 3px;
+    color: #00BFA5;
+}
+
+.destiny{
+    font-family: BlowBrush;
+    font-size: 1.5vw;
+    font-weight: 100;
+    line-height: 50%;
+    letter-spacing: 3px;
+    padding-left: 300px;
+}
+
+.my-intro{
+    margin-left: 10%;
+    position: absolute;
+    top: 60%;
+    font-size: 1.2vw;
+    -ms-transform: translateY(-60%);
+    transform: translateY(-60%); 
+    max-width: 30%;
+    color: #212121;
+    line-height: 140%;
+    letter-spacing: 2px;
+    text-align: justify;
+    text-shadow: 0px 3px #00FF66;
+}
+
+.contact-icon{
+    width: 4vw;
+    background-color: white;
+    box-shadow: 0px 0px #888888;
+    position: absolute;
+    left: 60%;
+    right: 40%;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.contact-icon a {
+    display: block;
+    text-align: center;
+    padding: 1vw;
+    transition: all 0.3s ease;
+    font-size: 1.5vw;
+}
+
+.contact-icon a *{
+    color: #00BFA5;
+}
+
+.section-footer{
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    font-size: 1.5vw;
+}
+
+.section-footer *{
+    color: #000000;
+}
