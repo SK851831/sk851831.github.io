@@ -28,6 +28,10 @@ body{
     font-size: 100%; 
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     font-family: 'Roboto Slab', serif;
     color: #333447;
@@ -66,7 +70,7 @@ body{
 }
 
 .my-intro{
-    margin-left: 10%;
+    left: 10%;
     position: absolute;
     top: 60%;
     font-size: 1.2vw;
@@ -80,10 +84,10 @@ body{
     text-shadow: 0px 3px #00FF66;
 }
 
-.contact-icon{
+.contact-group{
     width: 4vw;
+    text-align: center;
     background-color: white;
-    box-shadow: 0px 0px #888888;
     position: absolute;
     left: 60%;
     right: 40%;
@@ -102,13 +106,112 @@ body{
     color: #00BFA5;
 }
 
+.contact-icon:hover > .contact-text{
+    visibility: visible;
+    transform: translate(5%, 0px);
+} 
+
+.contact-icon{
+    position: relative;
+}
+
+.contact-text{
+    visibility: hidden;
+    width: 6vw;
+    font-family: 'Roboto Slab', serif;
+    position: absolute;
+    text-align: left;
+    transition: transform .5s ease-out;
+    top: 1vw;
+    left: 120%;
+    font-size: 1vw;
+}
+
 .section-footer{
     position: absolute;
+    transition: transform .3s ease-out;
     bottom: 5%;
     left: 50%;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
 }
 
 .section-footer *{
     color: #000000;
+}
+
+.section-footer:hover{
+    transform: translate(0, 10px);
+}
+
+.elevator{
+    top: 25%;
+    bottom: 75%;
+    position: fixed;
+    right: 5%;
+}
+
+.floor-display{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin: 8px;
+}
+
+.floor-display.active{
+    text-shadow: 0px 3px #00FF66;
+}
+
+.button-group{
+    border: none;
+}
+
+.lift-button{
+    cursor: pointer;
+    margin: 8px auto;
+    outline: none;
+    font: bold 1vw "Roboto Slab", Arial, Helvetica, Geneva, sans-serif;
+    text-align: center;
+    border: 0px;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    color: #e9e6e4;
+    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+    background-image: linear-gradient(top, #f4f1ee, #fff);
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    		
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.lift-button:active{
+    color:#212121;
+	text-shadow:0px 0px 6px #00FF66;
+    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+    background-image: linear-gradient(top, #efedec, #f7f4f4);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.lift-button.active{
+    cursor: default;
+    color:#212121;
+	text-shadow:0px 0px 6px #00FF66;
+    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+    background-image: linear-gradient(top, #efedec, #f7f4f4);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.lift-button.active:hover, .lift-button.active:hover+.floor-display{
+	text-shadow:0px 0px 6px #00FF66;
+}
+.lift-button:hover , .lift-button:hover+.floor-display{
+    color:#212121;
+	text-shadow:0px 0px 6px #eb2f2f;
+}
+
+#about-section{
+    background: #E8EAF6; 
+    box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
 }
