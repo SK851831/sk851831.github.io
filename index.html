@@ -16,7 +16,9 @@
         <link href="images/favicon-32x32.png" rel="shortcut icon" type="image/png">
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Titillium+Web&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
-        <script src="https://kit.fontawesome.com/6bda076a3e.js" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://kit.fontawesome.com/6bda076a3e.js" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body class="top">
         <div class="elevator">
@@ -83,16 +85,175 @@
             <a class="section-footer" href="#about-section"><i class="fas fa-angle-double-down"></i></a>
         </div>
         <div class="section" id="about-section">
-
+            <h1 class="section-header">About Me</h1>
+            <div class="my-motto">
+                STANDING STILL IS THE FASTEST WAY OF MOVING BACKWARDS IN A RAPIDLY CHANGING WORLD
+                <span class="author">- LAUREN BACALL</span>
+            </div>
+            <div class="my-details">
+                Hola! My name is <span class="my-name-about">Santhosh Kumar</span>. Being a tech enthusiast, I pursue a challenging career in a company that 
+                gives me an opportunity to work in a collaborative and 
+                competitive environment and where my acquired skills will be an asset
+                to the company which offers security and Professional growth.
+            </div>
+            <div class="my-profession">
+                <i class="far fa-address-card"></i>
+                <span style="font-weight: 700;">Current Position (2017 - Present)</span>
+                <span>Network Development Engineer 2</span>
+                <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;">DELL EMC ISG</span>
+            </div>
+            <div class="my-experience">
+                <div class="my-work">
+                    <i class="fas fa-terminal"></i>
+                    <span style="font-weight: 700;">Work Experience</span>
+                    <span>Intern (2016 - 2017)</span>
+                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;" >Komparify.com</span>
+                </div>
+                <div class="my-holder">
+                    <i class="fas fa-people-carry"></i>
+                    <span style="font-weight: 700;">Responsibility</span>
+                    <span>Executive Member (2015 - 2016)</span>
+                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;" >SVCE ACE Student Chapter</span>
+                </div>
+                <div class="my-education">
+                    <i class="fas fa-graduation-cap"></i>
+                    <span style="font-weight: 700;">Education</span>
+                    <span>B.E. Computer Science and Engineering</span>
+                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;" >SVCE, Anna University</span>
+                </div>
+            </div>
+            <a class="section-footer" href="#portfolio-section"><i class="fas fa-angle-double-down"></i></a>
         </div>
         <div class="section" id="portfolio-section">
-
+            <h1 class="section-header">What I Done</h1>
+            <div class="portfolio">
+                <div class="portfolio-record">
+                    <div class="ticket">
+                        <div class="ticket-head ticket-red">
+                            <div class="ticket-barcode">
+                                <i class="fas fa-barcode"></i>
+                            </div>
+                            <div class="ticket-name">
+                                Interrupt - 15
+                            </div>
+                        </div>
+                        <div class="ticket-image ticket-white">
+                            <img src="images/interrupt-key.png" />
+                        </div>
+                        <div class="ticket-info ticket-white">
+                            SVCE CSE Symposium <br /> 2015
+                        </div>
+                        <div class="ticket-rip ticket-white">
+                        </div>
+                        <div class="ticket-bottom ticket-white">
+                            <div class="ticket-tab ticket-red-invert">
+                                View
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-record">
+                    <div class="ticket">
+                        <div class="ticket-head ticket-violet">
+                            <div class="ticket-barcode">
+                                <i class="fas fa-barcode"></i>
+                            </div>
+                            <div class="ticket-name">
+                                SVCE ACM
+                            </div>
+                        </div>
+                        <div class="ticket-image ticket-white">
+                            <img src="images/svceacm-key.png"" />
+                        </div>
+                        <div class="ticket-info ticket-white">
+                            SVCE ACM Student Chapter <br /> 2015
+                        </div>
+                        <div class="ticket-rip ticket-white">
+                        </div>
+                        <div class="ticket-bottom ticket-white">
+                            <div class="ticket-tab ticket-violet-invert">
+                                View
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-record">
+                    <div class="ticket">
+                        <div class="ticket-head ticket-green">
+                            <div class="ticket-barcode">
+                                <i class="fas fa-barcode"></i>
+                            </div>
+                            <div class="ticket-name">
+                                Interrupt - 16
+                            </div>
+                        </div>
+                        <div class="ticket-image ticket-white">
+                            <img src="images/interrupt16-min.png" />
+                        </div>
+                        <div class="ticket-info ticket-white">
+                            SVCE CSE Symposium <br /> 2016
+                        </div>
+                        <div class="ticket-rip ticket-white">
+                        </div>
+                        <div class="ticket-bottom ticket-white">
+                            <div class="ticket-tab ticket-green-invert">
+                                View
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+            <div class="portfolio-overlay" style="display: none;">
+                <div class="close-ticket">
+                    <i class="fas fa-times"></i>
+                </div>
+                <div class="ticket-details">
+                    <div class="ticket-sidebar">
+                        <div class="ticket-partition active">
+                            <div class="ticket-overlay-name">
+                                Interrupt '15
+                            </div>
+                            <div class="ticket-overlay-info">
+                                A national level technical Symposium conducted by SVCE in 2015.
+                            </div>
+                        </div>
+                        <div class="ticket-partition">
+                            <div class="ticket-overlay-name">
+                                SVCE ACM
+                            </div>
+                            <div class="ticket-overlay-info">
+                                Student Chapter: Association for Computing Machinery by SVCE in 2015.
+                            </div>
+                        </div>
+                        <div class="ticket-partition">
+                            <div class="ticket-overlay-name">
+                                Interrupt '16
+                            </div>
+                            <div class="ticket-overlay-info">
+                                A national level technical Symposium conducted by SVCE in 2016.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ticket-overlay" id="scrollbar">
+                        <div class="ticket-overlay-image" style="display: none;">
+                            <img src="images/interrupt.png" />
+                        </div>
+                        <div class="ticket-overlay-image" style="display: none;">
+                            <img src="images/svceacm.png" />
+                        </div>
+                        <div class="ticket-overlay-image" style="display: none;">
+                            <img src="images/interrupt16.png" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a class="section-footer" href="#experience-section"><i class="fas fa-angle-double-down"></i></a>
         </div>
         <div class="section" id="experience-section">
-
+            <h1 class="section-header">What I Know</h1>
         </div>
         <div class="section" id="contact-section">
-
+            <h1 class="section-header">Contact</h1>
         </div>
     </body>
 </html>

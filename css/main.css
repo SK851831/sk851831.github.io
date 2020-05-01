@@ -1,3 +1,4 @@
+/* FONTS */
 @font-face {
     font-family: 'BlowBrush';
     src: url('fonts/BlowBrush.ttf')  format('truetype');
@@ -12,6 +13,7 @@
     font-style: normal;
 }
 
+/* PRE-REQUIREMENTS */
 * {
     box-sizing: border-box;
     margin-block-start: 0;
@@ -28,6 +30,22 @@ body{
     font-size: 100%; 
 }
 
+body::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: white;
+}
+
+body::-webkit-scrollbar
+{
+	width: 0.3vw;
+}
+
+body::-webkit-scrollbar-thumb
+{
+	background-color: #0D47A1;
+}
+
 html{
     scroll-behavior: smooth;
 }
@@ -37,12 +55,100 @@ html{
     color: #333447;
     line-height: 1.5; 
 }
-    
+
+/* ELEVATOR */
+.elevator{
+    top: 25%;
+    bottom: 75%;
+    position: fixed;
+    right: 5%;
+    z-index: 10;
+}
+
+.floor-display{
+    font-family: 'Titillium Web', sans-serif;
+    text-align: center;
+    font-size: 1.5vw;
+    letter-spacing: 3px;
+    display: inline-block;
+    margin: 8px;
+}
+
+.floor-display.active{
+    text-shadow: 0px 3px #00FF66;
+}
+
+.button-group{
+    border: none;
+}
+
+.lift-button{
+    cursor: pointer;
+    margin: 8px auto;
+    outline: none;
+    font: bold 1vw "Roboto Slab", Arial, Helvetica, Geneva, sans-serif;
+    text-align: center;
+    border: 0px;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    color: #e9e6e4;
+    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
+    background-image: linear-gradient(top, #f4f1ee, #fff);
+    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    		
+    -webkit-transition: all .1s linear;
+    transition: all .1s linear;
+}
+
+.lift-button:active{
+    color:#212121;
+	text-shadow:0px 0px 6px #00FF66;
+    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+    background-image: linear-gradient(top, #efedec, #f7f4f4);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.lift-button.active{
+    cursor: default;
+    color:#212121;
+	text-shadow:0px 0px 6px #00FF66;
+    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
+    background-image: linear-gradient(top, #efedec, #f7f4f4);
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.lift-button.active:hover, .lift-button.active:hover+.floor-display{
+	text-shadow:0px 0px 6px #00FF66;
+}
+
+.lift-button:hover , .lift-button:hover+.floor-display{
+    color:#212121;
+	text-shadow:0px 0px 6px #eb2f2f;
+}
+
+/* SECTION */
 .section{
-    background: blue;
     min-height: 100vh;
 }
 
+.section-footer{
+    position: absolute;
+    transition: transform .3s ease-out;
+    bottom: 5%;
+    left: 50%;
+    font-size: 1.8vw;
+}
+
+.section-footer *{
+    color: #000000;
+}
+
+.section-footer:hover{
+    transform: translate(0, 10px);
+}
+
+/* HOME SECTION */
 #home-section{
     background: white; 
 }
@@ -127,91 +233,359 @@ html{
     font-size: 1vw;
 }
 
-.section-footer{
+/* ABOUT SECTION */
+#about-section{
+    background: white; 
+    position: relative;
+    width: 100%;
+    box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.section-header{
     position: absolute;
-    transition: transform .3s ease-out;
-    bottom: 5%;
-    left: 50%;
-    font-size: 1.8vw;
-}
-
-.section-footer *{
-    color: #000000;
-}
-
-.section-footer:hover{
-    transform: translate(0, 10px);
-}
-
-.elevator{
-    top: 25%;
-    bottom: 75%;
-    position: fixed;
-    right: 5%;
-}
-
-.floor-display{
-    font-family: 'Titillium Web', sans-serif;
+    top: 5%;
+    width: 100%;
     text-align: center;
-    font-size: 1.5vw;
+    font-family: Alissya;
+    font-size: 4.5vw;
+    font-weight: 100;
     letter-spacing: 3px;
-    display: inline-block;
-    margin: 8px;
+    color: #00BFA5;
 }
 
-.floor-display.active{
+.my-motto{
+    position: absolute;
+    font-family: 'Roboto Slab', serif;
+    top: 25%;
+    left: 10%;
+    font-size: 1vw;
+    letter-spacing: 2px;
+}
+
+.my-motto .author{
+    font-family: BlowBrush;
+    display: block;
+    text-align: right;
+}
+
+.my-details{
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    max-width: 40%;
+    font-size: 1.2vw;
+    color: #212121;
+    line-height: 140%;
+    letter-spacing: 2px;
+    text-align: justify;
+}
+
+.my-name-about{
     text-shadow: 0px 3px #00FF66;
 }
 
-.button-group{
-    border: none;
-}
-
-.lift-button{
-    cursor: pointer;
-    margin: 8px auto;
-    outline: none;
-    font: bold 1vw "Roboto Slab", Arial, Helvetica, Geneva, sans-serif;
+.my-profession{
+    position: absolute;
+    left: 55%;
+    top: 35%;
     text-align: center;
-    border: 0px;
-    width: 3vw;
-    height: 3vw;
-    border-radius: 50%;
-    color: #e9e6e4;
-    background-image: -webkit-linear-gradient(top, #f4f1ee, #fff);
-    background-image: linear-gradient(top, #f4f1ee, #fff);
-    box-shadow: 5px 10px 10px 0px rgba(0, 0, 0, .3), inset 0px 4px 1px 1px white, inset 0px -3px 1px 1px rgba(204,198,197,.5);
-    		
-    -webkit-transition: all .1s linear;
-    transition: all .1s linear;
+    font-size: 2vw;
 }
 
-.lift-button:active{
-    color:#212121;
-	text-shadow:0px 0px 6px #00FF66;
-    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
-    background-image: linear-gradient(top, #efedec, #f7f4f4);
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+.my-profession *{
+    color: #0D47A1;
 }
 
-.lift-button.active{
-    cursor: default;
-    color:#212121;
-	text-shadow:0px 0px 6px #00FF66;
-    background-image: -webkit-linear-gradient(top, #efedec, #f7f4f4);
-    background-image: linear-gradient(top, #efedec, #f7f4f4);
-    box-shadow: 0 3px 5px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+.my-profession span{
+    font-size: 1vw;
+    display: block;
+    margin: 0.5vw;
+    color: #212121;
 }
 
-.lift-button.active:hover, .lift-button.active:hover+.floor-display{
-	text-shadow:0px 0px 6px #00FF66;
-}
-.lift-button:hover , .lift-button:hover+.floor-display{
-    color:#212121;
-	text-shadow:0px 0px 6px #eb2f2f;
+.my-experience{
+    position: absolute;
+    top: 65%;
+    left: 10%;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-#about-section{
+.my-experience div{
+    text-align: center;
+    font-size: 2vw;
+}
+
+.my-experience div span{
+    margin: 0.5vw;
+    font-size: 1vw;
+    display: block;
+    color: #212121;
+}
+
+.my-work *{
+    color: #26C6DA;
+}
+
+.my-holder *{
+    color: #F57F17;
+}
+
+.my-education *{
+    color: #616161;
+}
+
+/* Portfolio SECTION */
+#portfolio-section{
     background: #E8EAF6; 
+    position: relative;
+    width: 100%;
+    box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.portfolio{
+    position: absolute;
+    left: 10%;
+    top: 25%;
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.portfolio-record{
+    flex-basis: 33.33%;
+    text-align: center;
+}
+
+.ticket{
+    width: 15vw;
+    margin: auto;
+    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+}
+
+.ticket-head{
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.ticket-name{
+    font-family: 'Titillium Web', sans-serif;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 1vw;
+    flex-basis: 50%;
+}
+
+.ticket-barcode{
+    flex-basis: 50%;
+}
+
+.ticket-barcode *{
+    font-size: 1.5vw;
+    color: white;
+}
+
+.ticket-image *{
+    width: 15vw;
+    height: 8vw;
+    object-fit: cover;
+}
+
+.ticket-info{
+    padding: 0.5vw;
+    height: 4em;
+}
+
+.ticket-rip{
+    height: 20px;
+    margin: 1px 10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAACCAYAAAB7Xa1eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuOWwzfk4AAAAaSURBVBhXY5g7f97/2XPn/AcCBmSMQ+I/AwB2eyNBlrqzUQAAAABJRU5ErkJggg==);
+    background-repeat: repeat-x;
+    background-position: center;
+    position: relative;
+}
+
+.ticket-rip:before, .ticket-rip:after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+            transform: translate(-50%, -50%) rotate(45deg);
+    border: 5px solid transparent;
+    border-top-color: white;
+    border-right-color: white;
+    border-radius: 100%;
+    pointer-events: none;
+}
+
+.ticket-rip::before{
+    left: -10px;
+}
+
+.ticket-rip:after{
+    -webkit-transform: translate(-50%, -50%) rotate(225deg);
+    transform: translate(-50%, -50%) rotate(225deg);
+    right: -40px;
+}
+
+.ticket-bottom{
+    padding: 1vw;
+}
+
+.ticket-tab{
+    cursor: pointer;
+    margin: auto;
+    font-size: 1vw;
+    font-family: 'Titillium Web', sans-serif;
+    padding: 5px;
+    transition: all 0.3s ease-out;
+    background-position: 100% center;
+}
+
+
+.ticket-red, .ticket-red-invert:hover{
+    background-color: #F44336;
+    color: white;
+}
+
+.ticket-violet, .ticket-violet-invert:hover{
+    background-color: #4A148C;
+    color: white;
+}
+
+.ticket-green, .ticket-green-invert:hover{
+    background-color: #004D40;
+    color: white;
+}
+
+.ticket-white{
+    background-color: white;
+    color: #212121;
+}
+
+.ticket-red-invert{
+    background-color: white;
+    color: #F44336;
+}
+
+.ticket-violet-invert{
+    background-color: white;
+    color: #4A148C;
+}
+
+.ticket-green-invert{
+    background-color: white;
+    color: #004D40;
+}
+
+.portfolio-overlay{
+    background-color: grey;
+    height: 100%;
+    width: 100%;
+    z-index: 999;
+    position: relative;
+}
+
+.ticket-details{
+    background-color: white;
+    padding: 4vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.ticket-sidebar{
+    flex-basis: 20%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.ticket-partition{
+    flex-basis: 20%;
+    padding: 1vw;
+    text-align: center;
+}
+
+.ticket-partition *{
+    font-size: 2vw;
+    margin: auto;
+}
+
+.ticket-overlay-name{
+    font-size: 1.5vw;
+}
+
+.ticket-overlay-info{
+    font-size: 0.9vw;
+    text-align: left;
+}
+
+.ticket-overlay{
+    overflow-y: scroll;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#scrollbar::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+#scrollbar::-webkit-scrollbar
+{
+	width: 0.3vw;
+}
+
+#scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: #000000;
+}
+
+.ticket-overlay-image{
+    
+}
+
+.ticket-overlay-image *{ 
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.close-ticket{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 1.5vw;
+}
+
+.ticket-partition.active, .ticket-partition:hover.active{
+    text-shadow: 0px 3px #00FF66;
+}
+
+.ticket-partition:hover{
+    text-shadow:0px 0px 6px #eb2f2f;
+}
+
+/* Experience SECTION */
+#experience-section{
+    background: white; 
+    position: relative;
+    width: 100%;
+    box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+/* Contact SECTION */
+#contact-section{
+    background: white; 
+    position: relative;
+    width: 100%;
     box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
 }
