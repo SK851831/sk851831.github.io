@@ -56,6 +56,11 @@ html{
     line-height: 1.5; 
 }
 
+/* GLASS DOOR */
+.glass-door{
+    filter: blur(5px);
+}
+
 /* ELEVATOR */
 .elevator{
     top: 25%;
@@ -63,6 +68,10 @@ html{
     position: fixed;
     right: 5%;
     z-index: 10;
+}
+
+.elevator-options{
+    padding: 1vw;
 }
 
 .floor-display{
@@ -138,6 +147,13 @@ html{
     bottom: 5%;
     left: 50%;
     font-size: 1.8vw;
+    text-decoration: none !important;
+    text-align: center;
+}
+.section-footer span{
+    visibility: hidden;
+    font-size: 1.5vw;
+    padding: 1vw;
 }
 
 .section-footer *{
@@ -146,6 +162,10 @@ html{
 
 .section-footer:hover{
     transform: translate(0, 10px);
+}
+
+.section-footer:hover span{
+    visibility: visible;
 }
 
 /* HOME SECTION */
@@ -339,7 +359,7 @@ html{
 
 /* Portfolio SECTION */
 #portfolio-section{
-    background: #E8EAF6; 
+    background: white; 
     position: relative;
     width: 100%;
     box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
@@ -364,7 +384,7 @@ html{
 .ticket{
     width: 15vw;
     margin: auto;
-    filter: drop-shadow(1px 1px 3px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(4px 1px 5px rgba(0, 0, 0, 0.3));
 }
 
 .ticket-head{
@@ -399,6 +419,7 @@ html{
 
 .ticket-info{
     padding: 0.5vw;
+    font-size: 1vw;
     height: 4em;
 }
 
@@ -438,6 +459,7 @@ html{
 
 .ticket-bottom{
     padding: 1vw;
+    font-weight: 700;
 }
 
 .ticket-tab{
@@ -550,10 +572,6 @@ html{
 	background-color: #000000;
 }
 
-.ticket-overlay-image{
-    
-}
-
 .ticket-overlay-image *{ 
     object-fit: cover;
     max-width: 100%;
@@ -574,13 +592,274 @@ html{
     text-shadow:0px 0px 6px #eb2f2f;
 }
 
+.portfolio-footer{
+    width: 100%;
+    padding: 1vw;
+}
+
+.portfolio-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    list-style-type: none;
+}
+
+.portfolio-list li{
+    flex-basis: 33.33%;
+    word-wrap: break-word;
+    padding: 1vw;
+    text-align: center;
+    cursor: pointer;
+}
+
+.portfolio-list li:hover{
+    text-shadow:0px 0px 6px #00FF66;
+}
+
+.tooltip{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltip-text{
+    visibility: hidden;
+    opacity: 0.8;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    text-shadow: none;
+    font-size: 1vw;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -50%;
+}
+
+.tooltip:hover .tooltip-text{
+    visibility: visible;
+}
+
 /* Experience SECTION */
 #experience-section{
-    background: white; 
+    background: #eee; 
     position: relative;
     width: 100%;
     box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
 }
+
+.experience{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    right: 25%;
+    bottom: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BILLBOARD TOPCHART */
+.play-chart{
+    flex-basis: 100%;
+    height: 40%;
+}
+
+.scroll-playlists{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.playlist-head{
+    text-align: center;
+    padding: 1vw;
+}
+
+.playlist-head img{
+    height:6vw; 
+    width:6vw;
+    border-radius: 1vw;
+    box-shadow: 0 3px 2vw 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    transition: 0.5s;
+}
+
+.playlist-head img:hover{
+    height: 7vw;
+    width: 7vw;
+}
+
+.playlist-info{
+    font-family: BlowBrush;
+    text-transform: uppercase; 
+    letter-spacing: 2;
+    text-align: center;
+}
+
+.playlist-item.first img{
+    height: 7vw;
+    width: 7vw;
+}
+
+.playlist-item.first .playlist-info{
+    text-shadow: 0px 3px #00FF66;
+}
+
+.playlist-item.first{
+    order: -1;
+}
+
+/* PLAY LIST */
+.play-list{
+    flex-basis: 60%;
+    height: 60%;
+    padding: 1vw;
+}
+
+.playlist-name{
+    padding-bottom: 1vw;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.play-list-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.4vw;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+.play-list-item{
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+    align-items: center;
+    border-radius: 0.4vw;
+    justify-content: space-around;
+    font-size: 1vw;
+    height: 2.5vw;
+    background-color: white;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.play-bg *{
+    font-size: 2vw;
+}
+
+.heart-button:hover *{
+    color: red;
+}
+
+/* MEDIA PLAYER */
+.play-er{
+    flex-basis: 40%;
+    height: 60%;
+}
+
+.music-play{
+    position: relative;
+    left: 22.5%;
+    width: 65%;
+    margin-top: 1vw;
+}
+
+.music-player{
+    background-color: white;
+    padding: 1vw;
+    text-align: center;
+}
+
+.music-disc img{
+    height: 6vw;
+    width: 6vw;
+    border-radius: 50%;
+}
+
+.play-seekbar{
+    border: 1px solid #E8EAF6;
+    margin: 1vw;
+}
+
+.scrubber{
+    width:0%;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.s-left{
+    width: 0%;
+}
+
+.s-right{
+    width: 200%;
+}
+
+.scrubber::after{
+    font-family: "Font Awesome 5 Free";
+    content: '\f111';
+    font-weight: 700;
+    position: absolute;
+    color: #fb8c00;
+    margin-top: -3px;
+    font-size: 7px;
+    text-shadow:0px 0px 6px #fb8c00;
+}
+
+.left-timer{
+    float: left;
+}
+
+.right-timer{
+    float: right;
+}
+
+.player-options{
+    padding: 0.5vw;
+}
+
+.player-options a *{
+    font-size: 1.3vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
+}
+
+.player-options a:hover *{
+    color: #fb8c00;
+}
+
+.exp-badge *{
+    font-size: 1.5vw;
+    color: #E8EAF6;
+}
+
+.text-orange, .text-orange *{
+    color: #fb8c00;
+}
+
+.text-blue{
+    color: #00acc1;
+}
+
+.text-green{
+    color: #43a047;
+}
+
+.text-red{
+    color: #e53935;
+}
+
+.text-purple{
+    color: #8e24aa;
+}
+
+
 
 /* Contact SECTION */
 #contact-section{

@@ -17,30 +17,29 @@
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Titillium+Web&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="css/main.css">
         <script type="text/javascript" src="https://kit.fontawesome.com/6bda076a3e.js" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
         <script type="text/javascript" src="js/main.js"></script>
     </head>
     <body class="top">
         <div class="elevator">
             <div class="elevator-options">
-                <div class="button-group">
-                    <a href="#top"><button class="lift-button active">L1</button></a>
+                <div class="button-group" id="bg1">
+                    <a href="#top"><button class="lift-button active" onclick="goFloor(1)">L1</button></a>
                     <div class="floor-display active">Home</div>
                 </div>
-                <div class="button-group">
-                    <a href="#about-section"><button class="lift-button">L2</button></a>
+                <div class="button-group" id="bg2">
+                    <a href="#about-section"><button class="lift-button" onclick="goFloor(2)">L2</button></a>
                     <div class="floor-display">About Me</div>
                 </div>
-                <div class="button-group">
-                    <a href="#portfolio-section"><button class="lift-button">L3</button></a>
-                    <div class="floor-display">What I Done</div>
-                </div>
-                <div class="button-group">
-                    <a href="#experience-section"><button class="lift-button">L4</button></a>
+                <div class="button-group" id="bg3">
+                    <a href="#experience-section"><button class="lift-button" onclick="goFloor(3)">L3</button></a>
                     <div class="floor-display">What I Know</div>
                 </div>
-                <div class="button-group">
-                    <a href="#contact-section"><button class="lift-button">L5</button></a>
+                <div class="button-group" id="bg4">
+                    <a href="#portfolio-section"><button class="lift-button" onclick="goFloor(4)">L4</button></a>
+                    <div class="floor-display">What I Done</div>
+                </div>
+                <div class="button-group" id="bg5">
+                    <a href="#contact-section"><button class="lift-button" onclick="goFloor(5)">L5</button></a>
                     <div class="floor-display">Contact</div>
                 </div>
                 
@@ -51,8 +50,6 @@
                 <h1 class="my-name">
                     Santhosh<br/><span style="padding-left: 11vw; line-height: 80%;"></span> Kumar<br/><span class="destiny">DESIGNER / DEVELOPER / ENGINEER</span>
                 </h1>
-                
-                
             </div>
 
             <div class="my-intro">
@@ -82,7 +79,7 @@
                 </div>
             </div>
 
-            <a class="section-footer" href="#about-section"><i class="fas fa-angle-double-down"></i></a>
+            <a class="section-footer" href="#about-section"><span>Who Am I?</span><br/><i class="fas fa-angle-double-down"></i></a>
         </div>
         <div class="section" id="about-section">
             <h1 class="section-header">About Me</h1>
@@ -100,29 +97,129 @@
                 <i class="far fa-address-card"></i>
                 <span style="font-weight: 700;">Current Position (2017 - Present)</span>
                 <span>Network Development Engineer 2</span>
-                <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;">DELL EMC ISG</span>
+                <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase; letter-spacing: 2;">DELL EMC ISG</span>
             </div>
             <div class="my-experience">
                 <div class="my-work">
                     <i class="fas fa-terminal"></i>
                     <span style="font-weight: 700;">Work Experience</span>
                     <span>Intern (2016 - 2017)</span>
-                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;" >Komparify.com</span>
+                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase; letter-spacing: 2;" >Komparify.com</span>
                 </div>
                 <div class="my-holder">
                     <i class="fas fa-people-carry"></i>
                     <span style="font-weight: 700;">Responsibility</span>
                     <span>Executive Member (2015 - 2016)</span>
-                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;" >SVCE ACE Student Chapter</span>
+                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase; letter-spacing: 2;" >SVCE ACM Student Chapter</span>
                 </div>
                 <div class="my-education">
                     <i class="fas fa-graduation-cap"></i>
                     <span style="font-weight: 700;">Education</span>
                     <span>B.E. Computer Science and Engineering</span>
-                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase;" >SVCE, Anna University</span>
+                    <span style="font-family: BlowBrush; font-size: 1.5vw; text-transform: uppercase; letter-spacing: 2;" >SVCE, Anna University</span>
                 </div>
             </div>
-            <a class="section-footer" href="#portfolio-section"><i class="fas fa-angle-double-down"></i></a>
+            <a class="section-footer" href="#experience-section"><span>Hands-On</span><br/><i class="fas fa-angle-double-down"></i></a>
+        </div>
+        <div class="section" id="experience-section">
+            <h1 class="section-header">What I Know</h1>
+            <div class="experience">
+                <div class="play-chart">
+                    <h2>Billboard Topchart</h2>
+                    <div class="scroll-playlists">
+                        <div class="playlist-item first">
+                            <div class="playlist-head">
+                                <img src="images/designer.jpg"  />
+                            </div>
+                            <div class="playlist-info">
+                                Full-Stack Design
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div class="playlist-head">
+                                <img src="images/developer.jpg"  />
+                            </div>
+                            <div class="playlist-info">
+                                Full-Stack Developement
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div class="playlist-head">
+                                <img src="images/programming.jpg"  />
+                            </div>
+                            <div class="playlist-info">
+                                Programming
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div class="playlist-head">
+                                <img src="images/networking.jpg"  />
+                            </div>
+                            <div class="playlist-info">
+                                Networking &amp; Opensource
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div class="playlist-head">
+                                <img src="images/cloud.jpg"  />
+                            </div>
+                            <div class="playlist-info">
+                                Cloud &amp; Virtualization
+                            </div>
+                        </div>
+                        <div class="playlist-item">
+                            <div class="playlist-head">
+                                <img src="images/design-layers.jpg"  />
+                            </div>
+                            <div class="playlist-info">
+                                What else?
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="play-list">
+                    <h2>Most Popular</h2>
+                    <h3 class="playlist-name">Full Stack Design</h3>
+                    <div class="play-list-items">
+                        <div class="play-list-item">
+                            <div class="play-number">01</div>
+                            <div class="play-bg"><i class="fab fa-html5"></i></div>
+                            <div class="play-name">
+                                HTML
+                            </div>
+                            <i class="fas fa-caret-right"></i>
+                            <div class="play-branch">FrontEnd</div>
+                            <div class="play-time">0:10</div>
+                            <a class="heart-button" href="#heart"><i class="far fa-heart"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="play-er">
+                    <h2 style="left: 22.5%; position: relative;">Now Playing</h2>
+                    <div class="music-play">
+                        <div class="music-player">
+                            <div class="music-disc">
+                                <img src="images/programming.jpg" />
+                            </div>
+                            <h3>HTML</h3>
+                            <h4>FrontEnd</h4>
+                            <div class="play-seekbar">
+                                <div class="scrubber s-right"></div>
+                            </div>
+                            <div class="left-timer">0:10</div>
+                            <div class="right-timer">0:10</div>
+
+                            <div class="player-options">
+                                <a href="#previous"><i class="fas fa-step-backward"></i></a>
+                                <a href="#play"><i class="fas fa-play"></i></a>
+                                <a href="#next"><i class="fas fa-step-forward"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <a class="section-footer" href="#portfolio-section"><span>Portfolio</span><br/><i class="fas fa-angle-double-down"></i></a>
         </div>
         <div class="section" id="portfolio-section">
             <h1 class="section-header">What I Done</h1>
@@ -202,6 +299,18 @@
                         </div>
                     </div>
                 </div> 
+                <div class="portfolio-footer">
+                    <ul class="portfolio-list">
+                        <li class="tooltip">Search Engine<span class="tooltip-text">Provided search engine functionality in Komparify.com using Elastic search</span></li>
+                        <li class="tooltip">Speed Test<span class="tooltip-text">Provided speed test functionality in Komparify.com similar to fast.com</span></li>
+                        <li class="tooltip">Design Interrupt 15<span class="tooltip-text">Winner for Web Design Competition held on Jan 2015</span></li>
+                        <li class="tooltip">Secure and Decentralized File transfer<span class="tooltip-text">Final year project based on one of the cutting-edge technology - Blockchain</span></li>
+                        <li class="tooltip">Educe Bags<span class="tooltip-text">An Android App prototype for IOT implemented smart bags and presented 
+                            the idea in Startup Weekend Hyderabad 2015
+                        </span></li>
+                        <li class="tooltip">Mock Test<span class="tooltip-text">A mockup prototype runs on Apache for SVCE placement preparation.</span></li>
+                    </ul>
+                </div>
             </div>
             <div class="portfolio-overlay" style="display: none;">
                 <div class="close-ticket">
@@ -247,13 +356,11 @@
                     </div>
                 </div>
             </div>
-            <a class="section-footer" href="#experience-section"><i class="fas fa-angle-double-down"></i></a>
-        </div>
-        <div class="section" id="experience-section">
-            <h1 class="section-header">What I Know</h1>
+            <a class="section-footer" href="#contact-section"><span>Contact</span><br/><i class="fas fa-angle-double-down"></i></a>
         </div>
         <div class="section" id="contact-section">
             <h1 class="section-header">Contact</h1>
+            <a class="section-footer" href="#top" style="left: 10%;"><span>Back to Square One!</span><br/><i class="fas fa-angle-double-up"></i></a>
         </div>
     </body>
 </html>
