@@ -1,0 +1,322 @@
+<div class="section" id="experience-section">
+    <h1 class="section-header">What I Know</h1>
+    <div class="experience">
+        <div class="play-chart">
+            <h2>Billboard Topchart</h2>
+            <div class="scroll-playlists">
+                <div class="playlist-item first">
+                    <div class="playlist-head">
+                        <img src="images/designer.jpg"  />
+                    </div>
+                    <div class="playlist-info">
+                        Full-Stack Design
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <div class="playlist-head">
+                        <img src="images/developer.jpg"  />
+                    </div>
+                    <div class="playlist-info">
+                        Full-Stack Developement
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <div class="playlist-head">
+                        <img src="images/programming.jpg"  />
+                    </div>
+                    <div class="playlist-info">
+                        Programming
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <div class="playlist-head">
+                        <img src="images/networking.jpg"  />
+                    </div>
+                    <div class="playlist-info">
+                        Networking &amp; Opensource
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <div class="playlist-head">
+                        <img src="images/cloud.jpg"  />
+                    </div>
+                    <div class="playlist-info">
+                        Cloud &amp; Virtualization
+                    </div>
+                </div>
+                <div class="playlist-item">
+                    <div class="playlist-head">
+                        <img src="images/design-layers.jpg"  />
+                    </div>
+                    <div class="playlist-info">
+                        What else?
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="play-list">
+            <h2>Most Popular</h2>
+            <h3 class="playlist-name">Full Stack Design</h3>
+            <div class="play-list-items">
+                <div class="play-list-item">
+                    <div class="play-number">01</div>
+                    <div class="play-bg"><i class="fab fa-html5"></i></div>
+                    <div class="play-name">
+                        HTML
+                    </div>
+                    <i class="fas fa-caret-right"></i>
+                    <div class="play-branch">FrontEnd</div>
+                    <div class="play-time">0:10</div>
+                    <a class="heart-button" href="#heart"><i class="far fa-heart"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="play-er">
+            <h2 style="left: 22.5%; position: relative;">Now Playing</h2>
+            <div class="music-play">
+                <div class="music-player">
+                    <div class="music-disc">
+                        <img src="images/programming.jpg" />
+                    </div>
+                    <h3>HTML</h3>
+                    <h4>FrontEnd</h4>
+                    <div class="play-seekbar">
+                        <div class="scrubber s-right"></div>
+                    </div>
+                    <div class="left-timer">0:10</div>
+                    <div class="right-timer">0:10</div>
+
+                    <div class="player-options">
+                        <a href="#previous"><i class="fas fa-step-backward"></i></a>
+                        <a href="#play"><i class="fas fa-play"></i></a>
+                        <a href="#next"><i class="fas fa-step-forward"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <a class="section-footer" href="#portfolio-section"><span>Portfolio</span><br/><i class="fas fa-angle-double-down"></i></a>
+</div>
+
+
+
+
+
+#experience-section{
+    background: #eee; 
+    position: relative;
+    width: 100%;
+    box-shadow: 0px -3px 10px 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+}
+
+.experience{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    right: 25%;
+    bottom: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* BILLBOARD TOPCHART */
+.play-chart{
+    flex-basis: 100%;
+    height: 40%;
+}
+
+.scroll-playlists{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.playlist-head{
+    text-align: center;
+    padding: 1vw;
+}
+
+.playlist-head img{
+    height:6vw; 
+    width:6vw;
+    border-radius: 1vw;
+    box-shadow: 0 3px 2vw 0 rgba(0,0,0,.4), inset 0px -3px 1px 1px rgba(204,198,197,.5);
+    transition: 0.5s;
+}
+
+.playlist-head img:hover{
+    height: 7vw;
+    width: 7vw;
+}
+
+.playlist-info{
+    font-family: BlowBrush;
+    text-transform: uppercase; 
+    letter-spacing: 2;
+    text-align: center;
+}
+
+.playlist-item.first img{
+    height: 7vw;
+    width: 7vw;
+}
+
+.playlist-item.first .playlist-info{
+    text-shadow: 0px 3px #00FF66;
+}
+
+.playlist-item.first{
+    order: -1;
+}
+
+/* PLAY LIST */
+.play-list{
+    flex-basis: 60%;
+    height: 60%;
+    padding: 1vw;
+}
+
+.playlist-name{
+    padding-bottom: 1vw;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.play-list-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0.4vw;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+.play-list-item{
+    display: flex;
+    flex-direction: row;
+    padding: 1vw;
+    align-items: center;
+    border-radius: 0.4vw;
+    justify-content: space-around;
+    font-size: 1vw;
+    height: 2.5vw;
+    background-color: white;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.play-bg *{
+    font-size: 2vw;
+}
+
+.heart-button:hover *{
+    color: red;
+}
+
+/* MEDIA PLAYER */
+.play-er{
+    flex-basis: 40%;
+    height: 60%;
+}
+
+.music-play{
+    position: relative;
+    left: 22.5%;
+    width: 65%;
+    margin-top: 1vw;
+}
+
+.music-player{
+    background-color: white;
+    padding: 1vw;
+    text-align: center;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.2), 0 0 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 1vw;
+}
+
+.music-disc img{
+    height: 6vw;
+    width: 6vw;
+    border-radius: 2vw;
+}
+
+.play-seekbar{
+    border: 1px solid #E8EAF6;
+    margin: 1vw;
+}
+
+.scrubber{
+    width:0%;
+    height: 2px;
+    margin-top: -1px;
+}
+
+.s-left{
+    width: 0%;
+}
+
+.s-right{
+    width: 200%;
+}
+
+.scrubber::after{
+    font-family: "Font Awesome 5 Free";
+    content: '\f111';
+    font-weight: 700;
+    position: absolute;
+    color: #fb8c00;
+    margin-top: -3px;
+    font-size: 7px;
+    text-shadow:0px 0px 6px #fb8c00;
+}
+
+.left-timer{
+    float: left;
+}
+
+.right-timer{
+    float: right;
+}
+
+.player-options{
+    padding: 0.5vw;
+}
+
+.player-options a *{
+    font-size: 1.3vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
+}
+
+.player-options a:hover *{
+    color: #fb8c00;
+}
+
+.exp-badge *{
+    font-size: 1.5vw;
+    color: #E8EAF6;
+}
+
+.text-orange, .text-orange *{
+    color: #fb8c00;
+}
+
+.text-blue{
+    color: #00acc1;
+}
+
+.text-green{
+    color: #43a047;
+}
+
+.text-red{
+    color: #e53935;
+}
+
+.text-purple{
+    color: #8e24aa;
+}
